@@ -161,17 +161,15 @@ section img:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .Kontak {
-        grid-template-columns: 1fr;
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Mengubah arah menjadi kolom untuk layar kecil */
+        padding: 1em; /* Memberikan ruang lebih pada ponsel */
     }
-
-    .contact-text h2 {
-        font-size: 2rem;
-    }
-
-    .contact-icons i {
-        margin: 15px 10px 0 0;
+    
+    nav a {
+        margin: 10px 0; /* Memberikan jarak antar link */
+        font-size: 1.2em; /* Ukuran font sedikit lebih besar untuk kenyamanan */
     }
 }
 
