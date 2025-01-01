@@ -1,0 +1,205 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #ededed;
+    background: #03121e;
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    background: #03121e;
+    color: #fff;
+    padding: 1em 0;
+    border-bottom: 2px solid #002b49;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #002b49;
+    padding: 0.5em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #0ef;
+}
+
+/* Section Styling */
+section {
+    text-align: center;
+    padding: 2em 1em;
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+section img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50px;
+    object-fit: cover;
+    border: 2px solid #0ef;
+    transition: transform 0.3s ease;
+}
+
+section img:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contact Section */
+.Kontak {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    gap: 3rem;
+    padding: 2em 30px;
+    margin-top: 2em;
+}
+
+.contact-text h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact-text h2 span {
+    color: #0ef;
+}
+
+.contact-text h4 {
+    margin: 15px 0;
+    color: rgb(228, 228, 228);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.contact-text p {
+    color: rgb(177, 177, 177);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.contact-list {
+    margin-bottom: 2rem;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.contact-list i {
+    display: inline-block;
+    color: #0ef;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: color 0.4s ease;
+}
+
+.contact-list li a:hover {
+    transform: scale(1.05) translateY(-3px);
+    color: #0ef;
+}
+
+.contact-icons i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 0 0;
+    transition: all 0.5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.contact-icons i:hover {
+    background: #0ef;
+    color: #000;
+    box-shadow: 0 0 20px #0ef;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Kontak {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-text h2 {
+        font-size: 2rem;
+    }
+
+    .contact-icons i {
+        margin: 15px 10px 0 0;
+    }
+}
+
+/* Animations */
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5em 0;
+    background: rgb(0, 35, 75);
+    color: #fff;
+    margin-top: 2em;
+    font-size: 1rem;
+    border-top: 2px solid #002b49;
+}
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
