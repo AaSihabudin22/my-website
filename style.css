@@ -165,11 +165,15 @@ section img:hover {
     nav {
         flex-direction: column; /* Mengubah arah menjadi kolom untuk layar kecil */
         padding: 1em; /* Memberikan ruang lebih pada ponsel */
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
     }
     
     nav a {
         margin: 10px 0; /* Memberikan jarak antar link */
         font-size: 1.2em; /* Ukuran font sedikit lebih besar untuk kenyamanan */
+        white-space: normal;
     }
 }
 
